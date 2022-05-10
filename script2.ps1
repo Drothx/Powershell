@@ -1,7 +1,10 @@
-# L'objectif étant de créer un script qui affiche le contenu de la variable USERDOMAIN. Que contient-il ?
+# Le but étant de créer un script qui affiche son propre nom et tous ses arguments.
+# a. EX : ./monscript.py hello world
+# b. Affiche : « Nom du script : monscript.py »
+# c. Affiche : « mes arguments : hello world »
 
-# Nous commençons par invoquer le nom du script actuel.
-Write-Host 'Nom du script :' $MyInvocation.MyCommand.Name
+# Cette ligne nous permet d'afficher dans un premier temps le nom du script exécuté.
+Write-Host 'Le nom du script est :' $MyInvocation.MyCommand.Name
 
-# On affiche le sarguments renseignés par l'utilisateur.
-Write-Host 'Message actuel:' $args
+# Cette ligne nous permet de d'afficher le/les argument(s) présent(s) à la suite du nom du script.
+Write-Host 'Mon/mes argument(s) est/sont :' $args
